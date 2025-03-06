@@ -1,0 +1,132 @@
+/* styles.css */
+
+/* 基本のスタイル */
+body {
+    font-family: 'Noto Serif JP', serif;  /* 和風のフォント */
+    background-color: #f8f4e5;  /* 和紙っぽい背景色 */
+    background-image: url('https://www.transparenttextures.com/patterns/pw-maze.png');  /* 和紙風のテクスチャ */
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;  /* 画面を縦方向に整列 */
+}
+
+/* コンテンツ全体を中央配置し、画面幅の60%に設定 */
+.container {
+    width: 40%;  /* 画面の6割 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* メニュー部分のスタイル */
+.menu {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px; /* ボタン下に少しスペースを開ける */
+    display: flex;  /* ボタンを縦並びにするためにflexを使用 */
+    flex-direction: column;  /* 縦方向に並べる */
+    align-items: center;  /* ボタンを中央に配置 */
+    gap: 15px;  /* ボタン間の間隔 */
+}
+
+h1 {
+    font-size: 48px;
+    color: #8b5e3c;  /* 和風の落ち着いた茶色 */
+    margin-bottom: 40px;
+    font-family: 'Yu Mincho', 'serif';  /* 書道のようなフォント */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #f5deb3;  /* 和風のベージュ */
+    border: 2px solid #8b5e3c;  /* 細い茶色の枠線 */
+    border-radius: 8px;
+    color: #4f2c1d;  /* 深い茶色 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;  /* ボタンの幅を画面幅に合わせる */
+    max-width: 300px;  /* ボタンの最大幅を指定 */
+}
+
+button:hover {
+    background-color: #d2b68b;  /* 少し金色がかった色 */
+    color: #fff;
+    border-color: #e0a96d;  /* ゴールド風の色 */
+}
+
+button:active {
+    transform: scale(0.98);  /* 押したときに少し縮む */
+}
+
+button:nth-child(1) {
+    margin-top: 20px;
+}
+
+/* 注釈部分のスタイル */
+footer.annotation {
+    font-size: 14px;  /* フォントサイズを小さめに */
+    color: #555;  /* 文字色は薄めの黒 */
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #f5deb3;  /* ボタンと同じ和風ベージュ */
+    border-top: 1px solid #8b5e3c;  /* 茶色の枠線 */
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* メディアクエリ: スマホサイズ対応 */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .menu {
+        padding: 30px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    footer.annotation {
+        font-size: 12px;  /* スマホでは注釈を少し小さく */
+    }
+
+    .container {
+        width: 90%;  /* スマホ画面では90%に広げる */
+    }
+}
+
+/* メディアクエリ: タブレット対応 */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .menu {
+        padding: 35px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 80%;  /* タブレット画面では80%に設定 */
+    }
+}

@@ -1,0 +1,84 @@
+/* 和紙風の背景 */
+body {
+    font-family: "游明朝", "Yu Mincho", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f4e6;
+    margin: 0;
+}
+
+/* コンテナ（和紙のような質感） */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #c4a484;
+}
+
+h2 {
+    color: #8b5a2b;
+    font-size: 2em;
+    border-bottom: 2px solid #c4a484;
+    padding-bottom: 10px;
+}
+
+/* アイテムカード */
+.item-card {
+    background: #fae6b1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #c4a484;
+}
+
+.item-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #8b0000;
+}
+
+.item-description {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* ボタンエリア */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+button {
+    background: linear-gradient(to bottom, #c4a484, #8b5a2b);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2em;
+    flex: 1;
+    margin: 0 5px;
+    font-weight: bold;
+    border: 2px solid #8b5a2b;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #8b5a2b, #5c3a1a);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,101 @@
+/* 全体のレイアウト設定 */
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #f8f4e6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: scroll; /* 画面をスクロール可能にする */
+}
+
+/* コンテナの設定 */
+.container {
+    width: 80%; /* 画面の80%を使用 */
+    max-width: 1200px; /* 最大幅を1200pxに設定 */
+    margin: 0 auto;
+}
+
+/* 検索バーのスタイル */
+.search-container {
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0; /* 検索バーが画面上部に固定される */
+    z-index: 10; /* 他の要素よりも前に表示される */
+    background-color: #f5f5f5; /* 背景色を指定 */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 検索入力フィールド */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b0bec5;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s;
+    text-indent: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border-color: #005b4f;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 91, 79, 0.5);
+}
+
+/* 詳細情報の表示 */
+#details {
+    position: sticky;
+    top: 60px; /* 検索バーの下に固定 */
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #00796b;
+    background-color: #e0f2f1;
+    display: none;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 20px auto;
+    transition: opacity 0.3s ease-in-out;
+    text-align: left;
+    z-index: 5; /* 検索バーより後ろに表示 */
+}
+
+/* リストのデザイン */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* 検索バーの下にスペースを作る */
+}
+
+li {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: #333;
+}
+
+li:hover {
+    background-color: #f5f5f5;
+}
+
+.selected {
+    background-color: #cfd8dc;
+    font-weight: bold;
+    color: #004d40;
+}
+
+

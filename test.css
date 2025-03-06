@@ -1,0 +1,143 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif; /* 和風のフォント */
+    background-color: #f8f4e6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 60%; /* 画面の6割を使用 */
+    max-width: 960px; /* 最大幅を指定 */
+    box-sizing: border-box;
+    height: 80%; /* 高さを80%に設定 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* スマホなどの小さい画面での対応 */
+}
+
+.option {
+    background-color: #e3d7c7;
+    color: #4a2f19;
+    border: 2px solid #d2b38d;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* ボタン間にスペース */
+    flex: 1 1 40%; /* ボタンの幅を調整 */
+}
+
+.option:hover {
+    background-color: #bfa57a;
+    color: white;
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.explanation {
+    font-size: 16px;
+    color: #4a2f19;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #e3d7c7;
+    color: #4a2f19;
+    font-size: 16px;
+    border: 2px solid #d2b38d;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #bfa57a;
+    color: white;
+}
+
+.buttons button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+/* レスポンシブデザイン (スマホ対応) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%; /* スマホでは画面幅いっぱいに */
+        height: auto; /* 高さを自動に */
+        padding: 20px;
+    }
+
+    .question {
+        font-size: 20px; /* 質問文を少し小さく */
+    }
+
+    .options {
+        flex-direction: column; /* 縦に並べる */
+        justify-content: center;
+    }
+
+    .option {
+        flex: 1 1 100%; /* ボタンを全幅にする */
+        padding: 12px 0; /* ボタン内の余白調整 */
+        font-size: 16px; /* フォントサイズを少し小さく */
+    }
+
+    .buttons button {
+        width: 48%; /* ボタンの幅を少し狭く */
+        font-size: 14px; /* フォントサイズを少し小さく */
+    }
+}
+
+/* タブレットや小さなデスクトップ向け */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%; /* タブレットでは少し広め */
+    }
+
+    .options {
+        flex-wrap: wrap; /* ボタンが横並びのままスクリーンサイズに合わせて調整 */
+    }
+
+    .option {
+        flex: 1 1 45%; /* ボタンの幅を調整 */
+    }
+}
+
+
